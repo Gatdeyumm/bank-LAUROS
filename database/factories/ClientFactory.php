@@ -23,7 +23,8 @@ class ClientFactory extends Factory
             'phone_number' => fake()->phoneNumber,
             'address' => fake()->address,
             'birth_date' => fake()->date(now()->subYears(18)),
-            'initial_deposit' => fake()->numberBetween(10000,30000)
+            'initial_deposit' => fake()->numberBetween(10000,30000),
+            'email' => fake()->safeEmail()
         ];
     }
 }
