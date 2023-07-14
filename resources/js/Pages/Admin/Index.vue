@@ -19,7 +19,7 @@ const props = defineProps({
     message: Object
 })
 
-// console.log(props.message)
+console.log(props.message)
 </script>
 
 <template>
