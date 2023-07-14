@@ -34,6 +34,6 @@ class AdminController extends Controller
 
         
 
-        return back()->with('info', 'Message has been sent to all clients!');
+        return back()->with('info', 'The message has been sent to all clients.');
     }
 }
