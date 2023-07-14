@@ -17,7 +17,7 @@ class TransactionFactory extends Factory
     public function definition(): array
     {
         return [
-            'client_id' => fake()->numberBetween(1,30),
+            'client_id' => fake()->numberBetween(1,10),
             'deposit' => $dp = fake()->boolean(),
             'amount' => $dp ? fake()->numberBetween(3000,10000) : fake()->numberBetween(500,3000),
             'user_id' => 1,

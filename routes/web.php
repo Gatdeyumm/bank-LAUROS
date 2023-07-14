@@ -5,6 +5,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +39,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/clients/pdf/{client}',[ClientController::class,'pdf']);
     Route::get('/clients/email/{client}',[ClientController::class, 'email']);
     Route::resource('clients', ClientController::class);
+
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+    Route::post('/admin/send-mail', [AdminController::class, 'sendMailToAllClients']);
 });
 
 require __DIR__.'/auth.php';
